@@ -38,9 +38,9 @@
             // 
             this.buttonSearch.BackColor = System.Drawing.Color.Red;
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSearch.Location = new System.Drawing.Point(12, 47);
+            this.buttonSearch.Location = new System.Drawing.Point(12, 12);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(75, 201);
             this.buttonSearch.TabIndex = 0;
             this.buttonSearch.Text = "Sök Bolag";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -48,7 +48,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(93, 49);
+            this.textBoxSearch.Location = new System.Drawing.Point(111, 103);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
             this.textBoxSearch.TabIndex = 1;
@@ -81,6 +81,7 @@
             this.Controls.Add(this.buttonSearch);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
