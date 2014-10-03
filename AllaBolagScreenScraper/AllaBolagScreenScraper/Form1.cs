@@ -33,8 +33,7 @@ namespace AllaBolagScreenScraper
             }
             else
             {
-                Title = "";
-
+                Title = textBoxRegex.Text;
                 screenscraperUp = new ScreenScraperUpplysning();
                 await screenscraperUp.ScreenScrapeAsync(textBoxSearch.Text);
                 labelResult.Text = screenscraperUp.Result;
