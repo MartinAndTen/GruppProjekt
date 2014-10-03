@@ -17,13 +17,11 @@ namespace AllaBolagScreenScraper
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            
-            ScreenScraper screenscraper=new ScreenScraper();
-            await screenscraper.Start(textBoxSearch.Text);
-            labelResult.Text = screenscraper.Result;
-
+          ScreenScraper screenscraper=new ScreenScraper();
+          await screenscraper.Start(textBoxSearch.Text);
+          labelResult.Text = screenscraper.Result;
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -37,9 +38,8 @@ namespace AllaBolagScreenScraper
             content = v;
             string Title = "<span [^>]*class=(\"|')reportTitleBig(\"|')>(.*?)</span>";
             string mc = Regex.Match(content, Title).ToString();
-
             Result = mc;
-
+            Result = Regex.Replace(Result, @"<[^>]*>", String.Empty);
 
 
         }
