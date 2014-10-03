@@ -33,7 +33,7 @@ namespace AllaBolagScreenScraper
             }
             else
             {
-                Title = textBoxRegex.Text;
+                Title = "<h1[^>]*?>(?<TagText>.*?)</h1>"; ;
                 screenscraperUp = new ScreenScraperUpplysning();
                 await screenscraperUp.ScreenScrapeAsync(textBoxSearch.Text);
                 labelResult.Text = screenscraperUp.Result;

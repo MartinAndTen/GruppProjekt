@@ -34,8 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxLevertor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxRegex = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -97,22 +95,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Leverantör";
             // 
-            // textBoxRegex
-            // 
-            this.textBoxRegex.Location = new System.Drawing.Point(111, 154);
-            this.textBoxRegex.Name = "textBoxRegex";
-            this.textBoxRegex.Size = new System.Drawing.Size(119, 20);
-            this.textBoxRegex.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(108, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Regex Test";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,8 +110,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 261);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxRegex);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxLevertor);
             this.Controls.Add(this.label1);
@@ -152,8 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxLevertor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxRegex;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
 }
