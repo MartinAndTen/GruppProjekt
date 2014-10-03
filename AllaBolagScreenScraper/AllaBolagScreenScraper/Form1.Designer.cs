@@ -32,6 +32,8 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelResult = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxLevertor = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -50,7 +52,7 @@
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(111, 103);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(119, 20);
             this.textBoxSearch.TabIndex = 1;
             // 
             // labelResult
@@ -70,11 +72,34 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Copyright Martin Martin Hans";
             // 
+            // comboBoxLevertor
+            // 
+            this.comboBoxLevertor.FormattingEnabled = true;
+            this.comboBoxLevertor.Items.AddRange(new object[] {
+            "AllaBolag.se",
+            "Upplysning.se"});
+            this.comboBoxLevertor.Location = new System.Drawing.Point(111, 57);
+            this.comboBoxLevertor.Name = "comboBoxLevertor";
+            this.comboBoxLevertor.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxLevertor.TabIndex = 4;
+            this.comboBoxLevertor.SelectedIndexChanged += new System.EventHandler(this.comboBoxLevertor_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(108, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Leverantör";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 261);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxLevertor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.textBoxSearch);
@@ -93,6 +118,8 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxLevertor;
+        private System.Windows.Forms.Label label2;
     }
 }
 
