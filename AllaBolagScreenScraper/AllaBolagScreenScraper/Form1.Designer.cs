@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxRegex = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -56,6 +57,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(119, 20);
             this.textBoxSearch.TabIndex = 1;
+            this.textBoxSearch.Text = "5565995239";
             // 
             // labelResult
             // 
@@ -111,11 +113,21 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Regex Test";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(108, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Orgnummer";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 261);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxRegex);
             this.Controls.Add(this.label2);
@@ -142,6 +154,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxRegex;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

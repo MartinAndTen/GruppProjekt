@@ -38,11 +38,6 @@ namespace AllaBolagScreenScraper
                 await screenscraperUp.ScreenScrapeAsync(textBoxSearch.Text);
                 labelResult.Text = screenscraperUp.Result;
             }
-
-
-        
-         
-          
         }
 
         private void Form1_Load(object sender, EventArgs e)
