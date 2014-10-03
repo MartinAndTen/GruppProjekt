@@ -21,21 +21,29 @@ namespace AllaBolagScreenScraper
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            ScreenScraperAllaBolag screenscraper;
+            ScreenScraperUpplysning screenscraperUp;
           Adress = "http://www." + comboBoxLevertor.Text + "/" + textBoxSearch.Text;
             if (comboBoxLevertor.SelectedIndex==0)
             {
                 Title = "<span [^>]*class=(\"|')reportTitleBig(\"|')>(.*?)</span>";
+               screenscraper= new ScreenScraperAllaBolag();
+                await screenscraper.ScreenScrapeAsync(textBoxSearch.Text);
+                labelResult.Text = screenscraper.Result;
             }
             else
             {
-                Title = "<div [^>]*class=(\"|')datapage(\"|')>(.*?)</div>";
-            }
- 
-            
+                Title = "";
 
-          ScreenScraperClass screenscraper=new ScreenScraperClass();
-          await screenscraper.ScreenScrapeAsync(textBoxSearch.Text);
-          labelResult.Text = screenscraper.Result;
+                screenscraperUp = new ScreenScraperUpplysning();
+                await screenscraperUp.ScreenScrapeAsync(textBoxSearch.Text);
+                labelResult.Text = screenscraperUp.Result;
+            }
+
+
+        
+         
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)

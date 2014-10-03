@@ -11,7 +11,7 @@ namespace AllaBolagScreenScraper
 {
 
       
-    class ScreenScraperClass:IScreenScraper
+    class ScreenScraperAllaBolag:IScreenScraper
     {
         public string Result;
         public string content;
