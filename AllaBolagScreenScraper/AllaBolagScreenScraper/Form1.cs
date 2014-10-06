@@ -30,7 +30,6 @@ namespace AllaBolagScreenScraper
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBoxLevertor.SelectedIndex = 0;
-
         }
 
         private void comboBoxLevertor_SelectedIndexChanged(object sender, EventArgs e)
