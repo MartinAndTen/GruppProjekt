@@ -79,7 +79,9 @@
             this.comboBoxLevertor.FormattingEnabled = true;
             this.comboBoxLevertor.Items.AddRange(new object[] {
             "AllaBolag.se",
-            "Upplysning.se"});
+            "Upplysning.se",
+            "Eniro.se",
+            "Hitta.se"});
             this.comboBoxLevertor.Location = new System.Drawing.Point(111, 57);
             this.comboBoxLevertor.Name = "comboBoxLevertor";
             this.comboBoxLevertor.Size = new System.Drawing.Size(121, 21);

@@ -53,7 +53,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IScreenScraper.cs" />
+    <Compile Include="ScreenScraperEniro.cs" />
     <Compile Include="ScreenScraperFactory.cs" />
+    <Compile Include="ScreenScraperHitta.cs" />
     <Compile Include="ScreenScraperUpplysning.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

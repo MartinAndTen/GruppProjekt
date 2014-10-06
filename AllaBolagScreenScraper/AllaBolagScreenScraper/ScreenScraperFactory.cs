@@ -19,6 +19,14 @@ namespace AllaBolagScreenScraper
             {
                 scraper = new ScreenScraperUpplysning();
             }
+            else if (type == "Eniro.se")
+            {
+                scraper = new ScreenScraperEniro();
+            }
+            else if (type == "Hitta.se")
+            {
+                scraper = new ScreenScraperHitta();
+            }
             return scraper;
         }
 
