@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AllaBolagScreenScraper
 {
-    class ScreenScraperEniro : IScreenScraper
+   public class ScreenScraperEniro : IScreenScraper
     {
         private string Result;
         private string content;

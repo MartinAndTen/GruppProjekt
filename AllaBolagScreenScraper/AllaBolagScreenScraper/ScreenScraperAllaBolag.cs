@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace AllaBolagScreenScraper
 {
-    class ScreenScraperAllaBolag : IScreenScraper
+    public class ScreenScraperAllaBolag : IScreenScraper
     {
         private string Result;
         private string content;
