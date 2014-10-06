@@ -11,45 +11,55 @@ namespace UnitTestAllaBolag
     public class ScreenScraper
     {
         [TestMethod]
-        public void TestReturnsCorrectCompanyMame()
+        public void TestUpplysningReturnsCorrectCompanyName()
         {
             //Arrange
-           ScreenScraperUpplysning scr = new ScreenScraperUpplysning();
-            string expexted = "Mattias Asplund Aktiebolag";
+            string expected = "Mattias Asplund Aktiebolag";
+            ScreenScraperUpplysning scrUpplysning = new ScreenScraperUpplysning();
             //Act
-            Task<string> actual = scr.ScreenScrapeAsync("5565995239");
-            string actual1 = actual.Result;
+            Task<string> upplysningTask = scrUpplysning.ScreenScrapeAsync("5565995239");
+            string actual = upplysningTask.Result;
             //Assert
-            Assert.AreEqual(expexted, actual1);
+            Assert.AreEqual(expected, actual);
+        }
 
+        [TestMethod]
+        public void TestHittaReturnsCorrectCompanyName()
+        {
             //Arrange
-            ScreenScraperAllaBolag scr1 = new ScreenScraperAllaBolag();
-            string expexted1 = "Mattias Asplund Aktiebolag";
+            string expected = "Mattias Asplund Aktiebolag";
+            ScreenScraperHitta scrHitta = new ScreenScraperHitta();
             //Act
-            Task<string> actual2 = scr.ScreenScrapeAsync("5565995239");
-            string actual22 = actual2.Result;
+            Task<string> hittaTask = scrHitta.ScreenScrapeAsync("5565995239");
+            string actual = hittaTask.Result;
             //Assert
-            Assert.AreEqual(expexted1, actual22);
+            Assert.AreEqual(expected, actual);
+        }
 
-
+        [TestMethod]
+        public void TestEniroReturnsCorrectCompanyName()
+        {
             //Arrange
-            ScreenScraperEniro scr2 = new ScreenScraperEniro();
-            string expexted2 = "Mattias Asplund Aktiebolag";
+            string expected = "Mattias Asplund Aktiebolag";
+            ScreenScraperEniro scrEniro = new ScreenScraperEniro();
             //Act
-            Task<string> actual3 = scr.ScreenScrapeAsync("5565995239");
-            string actual33 = actual3.Result;
+            Task<string> eniroTask = scrEniro.ScreenScrapeAsync("5565995239");
+            string actual = eniroTask.Result;
             //Assert
-            Assert.AreEqual(expexted2, actual33);
+            Assert.AreEqual(expected, actual);
+        }
 
-
+        [TestMethod]
+        public void TestAllaBolagReturnsCorrectCompanyName()
+        {
             //Arrange
-            ScreenScraperHitta scr4 = new ScreenScraperHitta();
-            string expexted4 = "Mattias Asplund Aktiebolag";
+            string expected = "Mattias Asplund Aktiebolag";
+            ScreenScraperAllaBolag scrAllaBolag = new ScreenScraperAllaBolag();
             //Act
-            Task<string> actual4 = scr.ScreenScrapeAsync("5565995239");
-            string actual44 = actual4.Result;
+            Task<string> allaBolagTask = scrAllaBolag.ScreenScrapeAsync("5565995239");
+            string actual = allaBolagTask.Result;
             //Assert
-            Assert.AreEqual(expexted4, actual44);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
