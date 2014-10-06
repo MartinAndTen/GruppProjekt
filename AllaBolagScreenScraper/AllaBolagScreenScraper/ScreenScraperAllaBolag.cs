@@ -9,29 +9,52 @@ using System.Windows.Forms;
 
 namespace AllaBolagScreenScraper
 {
-    public class ScreenScraperAllaBolag : IScreenScraper
+    public class ScreenScraperAllaBolag : ScreenScraperCompany, IScreenScraper
     {
-        private string Result;
-        private string content;
-
-        HttpClient client = new HttpClient();
-
-        public async Task<string> ScreenScrapeAsync(string id)
+        public override string RegexPattern
         {
-            string Adress = "http://www.allabolag.se/" + id;
-            var response = await client.GetAsync(Adress);
-            var v = await response.Content.ReadAsStringAsync();
-            content = v;
-            return GetComapnyName("<span [^>]*class=(\"|')reportTitleBig(\"|')>(.*?)</span>");
+            get
+            {
+                return "<span [^>]*class=(\"|')reportTitleBig(\"|')>(.*?)</span>";
+            }
+            //set
+            //{
+            //    RegexPattern = value;
+            //}
         }
 
-        public string GetComapnyName(string title)
+        public override string Url
         {
-            string mc = Regex.Match(content, title).ToString();
-            Result = mc;
-            Result = Regex.Replace(Result, @"<[^>]*>", String.Empty);
-            return Result;
+            get
+            {
+                return "http://www.allabolag.se/";
+            }
+            //set
+            //{
+            //    Url = value;
+            //}
         }
+        //private string Result;
+        //private string content;
+
+        //HttpClient client = new HttpClient();
+
+        //public async Task<string> ScreenScrapeAsync(string id)
+        //{
+        //    string Adress = "http://www.allabolag.se/" + id;
+        //    var response = await client.GetAsync(Adress);
+        //    var v = await response.Content.ReadAsStringAsync();
+        //    content = v;
+        //    return GetComapnyName("<span [^>]*class=(\"|')reportTitleBig(\"|')>(.*?)</span>");
+        //}
+
+        //public string GetComapnyName(string title)
+        //{
+        //    string mc = Regex.Match(content, title).ToString();
+        //    Result = mc;
+        //    Result = Regex.Replace(Result, @"<[^>]*>", String.Empty);
+        //    return Result;
+        //}
 
         string IScreenScraper.Result
         {
