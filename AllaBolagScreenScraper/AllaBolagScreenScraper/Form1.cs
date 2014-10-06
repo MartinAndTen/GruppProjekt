@@ -14,6 +14,7 @@ namespace AllaBolagScreenScraper
     {
         public static string Title;
         public static string Adress;
+
         public Form1()
         {
             InitializeComponent();
@@ -22,21 +23,8 @@ namespace AllaBolagScreenScraper
         private async void button1_Click(object sender, EventArgs e)
         {
             IScreenScraper screenscraper = ScreenScraperFactory.CreateScreenScrape(comboBoxLevertor.Text);
-            //Adress = "http://www." + comboBoxLevertor.Text + "/" + textBoxSearch.Text;
-            if (comboBoxLevertor.SelectedIndex == 0)
-            {
-                Title = "<span [^>]*class=(\"|')reportTitleBig(\"|')>(.*?)</span>";
-                screenscraper = new ScreenScraperAllaBolag();
-                await screenscraper.ScreenScrapeAsync(textBoxSearch.Text);
-                labelResult.Text = screenscraper.Result;
-            }
-            else
-            {
-                Title = "<h1[^>]*?>(?<TagText>.*?)</h1>"; ;
-                screenscraperUp = new ScreenScraperUpplysning();
-                await screenscraperUp.ScreenScrapeAsync(textBoxSearch.Text);
-                labelResult.Text = screenscraperUp.Result;
-            }
+            await screenscraper.ScreenScrapeAsync(textBoxSearch.Text);
+            labelResult.Text = screenscraper.Result;
         }
 
         private void Form1_Load(object sender, EventArgs e)

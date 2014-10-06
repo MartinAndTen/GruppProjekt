@@ -11,7 +11,7 @@ namespace AllaBolagScreenScraper
 {
    public interface IScreenScraper
    {
-
+       string Result { get; set; }
 
        Task<string> ScreenScrapeAsync(string id);
        string GetComapnyName(string Title);

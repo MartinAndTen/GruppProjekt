@@ -11,7 +11,7 @@ namespace AllaBolagScreenScraper
         public static IScreenScraper CreateScreenScrape(string type)
         {
             IScreenScraper scraper = null;
-            if (type == "Allabolag.se")
+            if (type == "AllaBolag.se")
             {
                 scraper = new ScreenScraperAllaBolag();
             }
