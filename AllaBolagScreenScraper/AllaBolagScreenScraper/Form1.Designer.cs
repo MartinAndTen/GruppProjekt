@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelResult = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.comboBoxLevertor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelTimer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -106,11 +109,20 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Orgnummer";
             // 
+            // labelTimer
+            // 
+            this.labelTimer.AutoSize = true;
+            this.labelTimer.Location = new System.Drawing.Point(108, 138);
+            this.labelTimer.Name = "labelTimer";
+            this.labelTimer.Size = new System.Drawing.Size(0, 13);
+            this.labelTimer.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 261);
+            this.Controls.Add(this.labelTimer);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxLevertor);
@@ -135,6 +147,8 @@
         private System.Windows.Forms.ComboBox comboBoxLevertor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelTimer;
     }
 }
 
