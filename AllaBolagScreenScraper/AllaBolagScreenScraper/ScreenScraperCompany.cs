@@ -13,7 +13,7 @@ namespace AllaBolagScreenScraper
         public abstract string Url { get; }
         public abstract string RegexPattern { get; }
 
-        public string content;
+        private string content;
         public string Result;
 
         public async Task<string> ScreenScrapeAsync(string id)
